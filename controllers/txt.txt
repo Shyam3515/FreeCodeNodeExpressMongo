@@ -1,0 +1,18 @@
+/ Controllers /
+controllers are nothing but just a seperate file for each of the logic and we are going to be extracting all of this logic from each of the method right here and we are going to be creating a folder and then inside that folder we are going to be creating a different kind of files for each of these logics.
+
+/_Middlewares _/
+middleware is just a JavaScript function which takes three parameters the first parameter it will take is a request the second one it will take is the response and the third one it will take the next right here okay so a middleware is just a regular function which we've been using throughout which will take these three perimeters right here and it will do something but before we do that and this function will do something while it's doing the thing we are going to be passing this function right here at the middle of this uh what do we call it of this request and response cycle.
+middleware is a function as we just saw a second ago then it has access to request response object of the HTTP request and middleware function can perform operation on the incoming request it allows us to modify our response object or even pass control to the next middleware function
+
+const updatedProduct = await Product.findByID(id);
+res.status(200).json({ updatedProduct });
+This code fetches a specific product from the database using its unique identifier (id) and sends it back as a response to the client.
+
+1. const updatedProduct = await Product.findByID(id);
+   Purpose:
+   To retrieve a product document from the database using its unique identifier.
+
+2. res.status(200).json({ updatedProduct });
+   Purpose:
+   To send a JSON response containing the retrieved product back to the client.
